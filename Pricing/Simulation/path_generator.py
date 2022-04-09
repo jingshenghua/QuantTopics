@@ -45,7 +45,8 @@ class GeometricBrownianMotion:
         for i in range(1,len(time_steps)):
             samples[:,i] = np.exp(
                 rand.normal(
-                    self.__condition_mean(S_pre=samples[:,i-1],mu_pre=self.mu,sigma_pre=self.sigma,time_step=time_step),self.__condition_std(sigma_pre=self.sigma,time_step=time_step)
+                    self.__condition_mean(S_pre=samples[:,i-1],mu_pre=self.mu,sigma_pre=self.sigma,time_step=time_step),
+                    self.__condition_std(sigma_pre=self.sigma,time_step=time_step)
                 )
             )
         return pd.DataFrame(samples,index=range(1,N+1),columns=time_steps)
