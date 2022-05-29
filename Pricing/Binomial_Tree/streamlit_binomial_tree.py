@@ -1,5 +1,6 @@
 import streamlit as st
 from datetime import datetime
+import matplotlib.pyplot as plt
 from tree_generator import BinomialTree
 import numpy as np
 st.set_option('deprecation.showPyplotGlobalUse', False)
