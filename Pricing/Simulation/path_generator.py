@@ -36,6 +36,7 @@ class GeometricBrownianMotion:
         param Random_State: fixed random state for simulation
         return: stock prices follow geometric Brownian motion from time 0 to time T
         """
+        self.T=T
         time_steps = np.arange(0,T+time_step,time_step,dtype=float)
         rand = np.random.RandomState(Random_State)
         samples = np.empty((N,len(time_steps)))
